@@ -1,17 +1,24 @@
+name: 🚀 FTP Deploy
 on:
   push:
     branches:
       - main
-name: 🚀 Deploy Release on push
+
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 9
+
+    - name: Checkout testLevel1
+      uses: actions/checkout@v4
+      with:
+         repository: RoCkHeLuCk/testLevel1
+         path: testLevel1
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
