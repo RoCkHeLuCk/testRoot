@@ -12,13 +12,20 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
       with:
-        fetch-depth: 9
+        fetch-depth: 0
+        submodules: true
 
     - name: Checkout testLevel1
       uses: actions/checkout@v4
       with:
          repository: RoCkHeLuCk/testLevel1
          path: testLevel1
+
+    - name: Checkout testLevel2
+      uses: actions/checkout@v4
+      with:
+         repository: RoCkHeLuCk/testLevel2
+         path: testLevel1/testLevel2
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
