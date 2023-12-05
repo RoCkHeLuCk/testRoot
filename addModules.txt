@@ -1,0 +1,5 @@
+git clone https://github.com/<usuário>/<repositório>
+git submodule add https://github.com/<usuário>/<repositório-biblioteca>
+git submodule update --init --recursive
+git commit -am "Adicionando novas alterações ao submódulo"
+git push

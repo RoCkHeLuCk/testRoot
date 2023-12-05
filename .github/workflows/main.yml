@@ -9,7 +9,7 @@ jobs:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: Checkout testRoot
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
@@ -20,12 +20,14 @@ jobs:
       with:
          repository: RoCkHeLuCk/testLevel1
          path: testLevel1
+         fetch-depth: 0
 
     - name: Checkout testLevel2
       uses: actions/checkout@v4
       with:
          repository: RoCkHeLuCk/testLevel2
          path: testLevel1/testLevel2
+         fetch-depth: 0
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
