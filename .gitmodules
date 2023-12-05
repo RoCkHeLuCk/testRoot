@@ -1,0 +1,3 @@
+[submodule "testLevel1"]
+	path = testLevel1
+	url = https://github.com/RoCkHeLuCk/testLevel1
