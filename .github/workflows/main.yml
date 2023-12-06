@@ -15,20 +15,6 @@ jobs:
         fetch-depth: 0
         submodules: true
 
-    - name: Checkout testLevel1
-      uses: actions/checkout@v4
-      with:
-         repository: RoCkHeLuCk/testLevel1
-         path: testLevel1
-         fetch-depth: 0
-
-    - name: Checkout testLevel2
-      uses: actions/checkout@v4
-      with:
-         repository: RoCkHeLuCk/testLevel2
-         path: testLevel1/testLevel2
-         fetch-depth: 0
-
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
